@@ -1,0 +1,314 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #e6ecf0;
+}
+
+.content-wrapper {
+  max-width: 1190px;
+  margin: 56px auto;
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px;/*Gap between sections*/
+}
+
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #e1e8ed;
+  padding: 10px 1px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-buttons {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-buttons li {
+  margin-right: 20px; /*spacing links */
+}
+
+.nav-buttons li a {
+  text-decoration: none;
+  color: #66757f;
+  font-weight: bold;
+}
+
+.nav-buttons li a:hover {
+  text-decoration: underline;
+}
+
+.logo-container {
+  /* To center the logo */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.twitter-logo {
+  height: 24px; /*logo size */
+}
+
+.tweet-button {
+  background-color: #1da1f2;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tweet-button:hover {
+  background-color: #1991db;
+}
+
+.content-left {
+  position: relative;
+  width: 300px; /* content-left width */
+  box-sizing: border-box;
+  margin: 50px auto 0px;/*Move up or down*/
+  text-align: center;
+  border: 1px solid #ffffff; /* White border */
+  background-color: #fff; /* White background */
+  padding: 20px; /*padding inside the border */
+  flex: 1;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.profile-photo {
+  position: absolute;
+  top: 60%; /*Move profile pic up or down*/
+  left: 30%;/*Moves profile pic left*/
+  transform: translate(-50%, -50%);
+  border-radius: 50%; /* Makes it round */
+  width: 100px; /* Adjust as necessary */
+  height: 100px; /* Adjust as necessary */
+  z-index: 3;/*remy*/
+  border: 4px solid white; /* Adds white border around the profile picture */
+}
+
+.profile-photo img {
+  border-radius: 50%; /* Make it round */
+  width: 100px;/*Profile image width*/
+  height: 100px;/*Profile image height*/
+  border: 4px solid white; /* Adds white border around the profile picture */
+}
+
+.profile-info {
+  position: absolute;
+  top: 40%; /*Move remy*/
+  left: 20%;/*Move left remy*/
+  /*transform: translateX(10%);*/
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  z-index: 3;/* Below profile photo but above stats */
+}
+
+.profile-info h2 {
+  margin: 0;
+  text-decoration: underline;
+  color: rgb(0, 0, 0); /* Remy color */
+}
+
+.profile-info p {
+  margin: 0;
+  color: #000000; /* @remy color*/
+}
+
+.profile-stats {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff; /* tweets/following/followers bckg color */
+  padding: 10px 10;
+  position: relative;
+  top: 80px; /* Pulls the stats up or down to overlap with profile photo */
+  z-index: 1;
+  border-top: 4px solid white; /* */
+}
+
+.profile-stats div {
+  text-align: center;
+}
+
+.profile-stats span {
+  display: block;
+  color: #333; /* black*/
+}
+
+.profile-stats span:first-child {
+  font-weight: bold;
+  color: #333333; /* twets/following/followers font color*/
+}
+
+.profile-stats span:last-child {
+  font-weight: bold;
+  font-size: 20px; 
+  color: #12adeb; 
+}
+
+.profile-sidebar {
+  width: 290px;
+  position: fixed;
+  top: 50px; /* Height of header + some space */
+}
+.content-center {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-right: 20px;
+  border: 1px solid #fff; /* White border */
+  background-color: #fff; /* White background */
+  padding: 20px; 
+}
+
+.tweet {
+  display: flex;
+  align-items: center;
+  /*border-bottom: 1px solid #e6ecf0;*/
+  /*min-height: 51px;*/
+  padding: 8px 12px;
+  /*border-bottom: 1px solid #e6ecf0;*/
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px; /* Adds space between the profile picture and the text */
+}
+
+.tweet-info {
+  flex-grow: 1;
+}
+
+.user-and-time {
+  display: block;
+  /*align-items: baseline;
+  font-size: 14px;*/
+}
+
+.username {
+  display:inline;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.user-handle {
+  display:inline;
+  color: #657786; /* Twitter handle color */
+  margin-right: 5px;
+}
+
+.date {
+  display:inline;
+  color: #657786; /* Date color */
+  margin-right: 5px;
+}
+
+.tweet-content {
+  display: block;
+  /*align-items: center;*/
+  margin-top: 4px;
+}
+
+.tweet-content span {
+  font-weight: bold; 
+}
+
+.content-right {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e1e8ed;
+  width: 290px; 
+  margin-left: auto; /* Pushes the div to the right */
+  padding: 20px;
+  margin: 50px auto 0px;/*Move up or down*/
+}
+
+.content-right h2 {
+  font-size: 24px;
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.suggestion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space between suggestions */
+  padding-bottom: 10px; /* Space at the bottom of each suggestion */
+  border-bottom: 1px solid #e6ecf0; /* Border line below each suggestion */
+}
+
+.suggestion img {
+  border-radius: 50%;
+  width: 48px; 
+  height: 48px; 
+  margin-right: 10px; 
+}
+
+.user-info {
+  flex-grow: 1; /* Button is aligned to the right */
+}
+
+.user-info strong {
+  font-size: 14px; 
+}
+
+button {
+  background-color: #1da1f2; /* Twitter blue */
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px; 
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a91da; /* Slightly darker blue when hover */
+}
+
+/* Responsive Design*/
+@media (max-width: 600px) {
+  .nav-link .fas, .nav-link .far {
+    display: inline-block;
+  }
+  .nav-link span {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content-right {
+    display: none;
+  }
+}
